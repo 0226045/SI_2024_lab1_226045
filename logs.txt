@@ -1,0 +1,31 @@
+commit cd1c4863fe794c891a3264237e210dae7e0d31fe (HEAD -> master, origin/master, origin/bug2, bug2)
+Merge: ccbdc29 97f29f1
+Author: 226045 <danny.cow@proton.me>
+Date:   Sun Mar 31 13:47:44 2024 +0200
+
+    Merge branch 'bug1'
+
+commit 97f29f1ecb75f4e07f6034ef280ae343f36a32af (origin/bug1, bug1)
+Author: 226045 <danny.cow@proton.me>
+Date:   Sun Mar 31 12:30:13 2024 +0200
+
+    Call method makeBigStringFrom in main class
+
+commit ccbdc29e497d5717d2f6035b8cef5649c9ef3d03
+Author: 226045 <danny.cow@proton.me>
+Date:   Sun Mar 31 12:26:45 2024 +0200
+
+    Fix wrong condition in makeBigStringFrom
+
+commit 4e2ba59a84ff64fbec076ea0415ec5bebeeeb8c3
+Author: 226045 <danny.cow@proton.me>
+Date:   Sun Mar 31 12:21:47 2024 +0200
+
+    Add starter code
+
+commit afb994d65819d0fb3aec66b1706c953f31030048
+Author: 226045 <danny.cow@proton.me>
+Date:   Sun Mar 31 12:16:40 2024 +0200
+
+    Initial commit
+

@@ -1,0 +1,76 @@
+Na nasiot kompjuter kreirame lokalnen repozitorium so ime "SI_2024_lab1_226045", potoa vo komandna linija gi vmetnuvame slednite naredbi:
+$ git init kreirame .git na nasiot lokalen repozitorium
+$ git remote add origin https://github.com/0226045/SI_2024_lab1_226045.git go povrzuvame lokalniot so remote repozitoriumot
+
+$ echo "Ilija Manevski 226045" >> README.md kreirame README.md datoteka soodvetno
+$ git config user.name "226045" zadavame username
+$ git config user.email "danny.cow@proton.me" zadavame email
+$ git commit -m "Initial commit" ova nema da funkcionira, ke ni dade poraka 'Untracked files', pa zatoa potrebno e so add i pisuvame na sledniot nacin:
+$ git add .
+$ git commit -m "Initial commit" Ovoj nacin profunkcionira
+
+Sledno, gi prevzemame trite fajlovi i gi smestuvame vo nasiot lokalen repozitorium
+
+$ git add .
+$ git commit -m "Add starter code"
+
+$ git push -u origin master # ja sinhronizirame grankata master upstream, odnosno so oddaleceniot (remote) repozitorium (napraveno e vo konzola) 
+$ git push -u origin bug1   # ne e vmetnata ovaa naredba vo konzola				    
+$ git push -u origin bug2   # istoto e i so ovaa komanda
+			    # site naredbi zaedno se podolu napisani vo ovoj tekst dokument i vo konzola soodvetno
+
+So komandata $ nano SILab1_1.java pristapuvame do fajlot SILab1_1.java i soodvetno pravime
+promena vo uslovot, kade nameseto '==' potrebno e da stoi '!='
+So komandata $ nano SILab1_2.java pristapuvame do fajlot SILab1_2.java i soodvetno pravime
+promena vo uslovot, kade namesto "<" potrebno e da stoi '>='
+
+$ git branch bug1 kreiranje na grankata bug1
+$ git branch bug2 kreiranje na grankata bug2
+$ git checkout bug1 premestuvanje na grankata bug1
+
+so naredbata $git nano SILab1_1.java pristapuvame do SILab1_1.java i gledame deka greskata e prethodno popravena (pred cekor 11)
+$ git commit -m "Fix wrong condition in filterOddLengthStrings" se pravi commit so napisanata poraka vo navodnicite
+
+$ git checkout bug1 premestuvanje na grankata bug2
+i so $git nano SILab1_2.java pristapuvame do SILab1_2.java i gledame deka greskata e prethodno popravena (pred cekor 13)
+
+$ git add .
+$ git commit -m "Fix wrong condition in makeBigStringFrom" se pravi commit so napisanata poraka vo navodnicite
+
+$ git checkout bug1 premestuvanje na grankata bug1
+so naredbata $ nano SILab1Main.java pristapuvame do fajlot SILab1Main.java i vmetnuvame System.out.println(SILab1_1.filterOddLengthStrings(list)); vo  linija 16
+izleguvame so Ctrl+x; y; Enter i pisuvame:
+
+$ git add .
+$ git commit -m "Call method makeBigStringFrom in main class" se pravi commit so napisanata poraka vo navodnicite
+
+18. $ git push origin bug1 za da ja dodademe bug1 grankata na github i isto taka $ git push origin bug2 za soodvetno i bug2 da ja dodademe na github (fali komandata $ git push -u origin master, no napisana e podolu vo ovoj dokument)
+
+$ git checkout master se prefrlame na grankata master
+$ git merge bug1 spojuvanje na grankata bug1 so grankata master
+
+$ git push -u origin master 
+$ git push -u origin bug1
+$ git push -u origin bug2 # ovde site granki se sinhroniziraat soodvetno
+
+$ git checkout bug2 se prefrlame na grankata bug2
+
+$ git fetch proveruva dali grankata master e vo tek so najnovite promeni
+$ git rebase origin/master pravime rebase sprema grankata master
+
+$ git checkout master se prefrlame na grankata master
+
+$ git merge bug2 spojuvanje na grankata bug2 so grankata master
+
+$ git push -u origin master
+$ git push -u origin bug1
+$ git push -u origin bug2 nema potreba za upotreba na --force
+
+$ git log da gi vidime i kopirame git logovite
+So komandata $ nano logs.txt go kreirame soodvetniot tekst dokument i vo nego gi zapisuvame dosegasnite git logovi
+
+$ nano 226045.txt go kreirame soodvetniot tekst dokument i vo nego gi vmetnuvame dosegasnite upotrebeni naredbi
+
+$ git push -u origin master
+$ git push -u origin bug1
+$ git push -u origin bug2 naredbi za sinhronizacija na grankite
